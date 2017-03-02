@@ -1,2 +1,8 @@
 pymongo==3.4.0
 pymodm==0.3.0
+
+bower  
+npm
+
+type 'npm install echarts' in static directory.
+type 'bower install bootstrap' in static directory.
