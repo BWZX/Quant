@@ -1,5 +1,5 @@
 """
-this file is used to storing some constant will be used 
+this file is used to store some constant will be used 
 within the app
 """
 
