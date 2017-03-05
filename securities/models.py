@@ -13,7 +13,16 @@ class Exchange(MongoModel):
     name = fields.CharField()
 
 class Security(MongoModel):
+    exchange = fields.ReferenceField(Exchange)
     name = fields.CharField()
     code = fields.CharField()
     industry = fields.CharField()
-    exchange = fields.ReferenceField(Exchange)
+
+class PriceEvent(MongoModel):
+	security = fields.ReferenceField(Security)
+	event_type = fields.IntegerField()
+	change_at = fields.IntegerField()
+	price_before = fields.FloatField()
+	price_after = fields.FloatField()
+	ratio = fields.FloatField()
+
