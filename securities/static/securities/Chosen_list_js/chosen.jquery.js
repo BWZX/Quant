@@ -219,6 +219,7 @@
       this.hoverItem(item);
 
       this.holder.text(item.text());
+      console.log(item.text()); ////
       var value = item.data('value');
       this.holder.data('value', value);
       this.element.val(value);
