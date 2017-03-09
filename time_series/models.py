@@ -9,7 +9,7 @@ from securities.models import Security
 
 # Connect to MongoDB first. PyMODM supports all URI options supported by
 # PyMongo. Make sure also to specify a database in the connection string:
-connect('mongodb://localhost:27017/quant')
+connect('mongodb://10.8.0.5:27017/quant')
 
 class TimeSeries(MongoModel):
 	security = fields.ReferenceField(Security)
