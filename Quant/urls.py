@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from securities import views
-from securities import postdata as pd
+from securities import services as svr
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'mainpage/', views.mainPage),
-    url(r'postdata/', pd.postData),
+    url(r'postdata/', svr.postData),
     
 ]

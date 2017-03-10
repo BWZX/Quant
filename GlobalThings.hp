@@ -1,0 +1,10 @@
+[day, h1, m30, tick] --OpenTSDB tags for period
+        
+[[datetime  open close lowest highest volume]...]  --server posted k-line data looks like.
+
+
+***reminder:
+1   to add period select item in UI and its relate
+    server side code in main_page.js / chosen.jquery.js / services.py
+
+2   add indicators select items in UI.
