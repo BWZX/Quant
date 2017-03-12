@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# from time_series.crawl_data import config
-import config
+from time_series.crawl_data import config
+# import config
 import json
 import urllib, urllib.request
 
@@ -38,19 +38,28 @@ def insertList(data):
             print(feedback+' '+printmsg) 
     pass    
 
-def getPriceData(period, code, price):    
-    url='http://10.8.0.5:4242/q?start=1m-ago&m=none:security.price{period={period},code={code},price={price}'.format(period=period, code=code, price=price)    
+def getPriceData(code, period, price):    
+    url='http://10.8.0.5:4242/api/query?start=1980/01/01-00:00:00&m=none:security.price%7Bperiod={period},code={code},price={price}%7D'.format(period=period, code=code, price=price)    
+    print(url)
     request=urllib.request.Request(url)  
-    result=urllib.request.urlopen(request)
-    print(result.getcode())  
+    result=urllib.request.urlopen(request, timeout=25)
+    if result.code == 200 or 204:
+        jstr=str(result.read(),encoding='utf-8')
+        result=json.loads(jstr)
+        return result[0]['dps']
+    else:
+        print('\n数据还未保存！！\n')
     #print(data)
     pass
 
-def getVolumeData(period, code):    
-    url='http://10.8.0.5:4242/q?start=1m-ago&m=none:security.volume{period={period},code={code}'.format(period=period, code=code)    
+def getVolumeData(code, period):    
+    url='http://10.8.0.5:4242/api/query?start=1980/01/01-00:00:00&m=none:security.volume%7Bperiod={period},code={code}%7D'.format(period=period, code=code)    
     request=urllib.request.Request(url)  
     result=urllib.request.urlopen(request)
-    print(result.getcode())  
+    if result.code == 200 or 204:
+        jstr=str(result.read(),encoding='utf-8')
+        result=json.loads(jstr)
+        return result[0]['dps'] 
     #print(data)
     pass
 

@@ -6,8 +6,8 @@ import config
 import json
 from datetime import datetime as dt, timedelta as td
 import pandas as pd
-# from time_series.crawl_data import database
-import database
+from time_series.crawl_data import database
+# import database
 
 MongodbJson={}     #输出数据爬取的开始点和结束点
 try:

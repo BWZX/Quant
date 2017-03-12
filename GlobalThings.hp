@@ -1,6 +1,6 @@
 [day, h1, m30, tick] --OpenTSDB tags for period
         
-[[datetime  open close lowest highest volume]...]  --server posted k-line data looks like.
+[[datetime  open close low high volume]...]  --server posted k-line data looks like.
 
 
 ***reminder:
