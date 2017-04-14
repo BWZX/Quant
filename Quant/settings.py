@@ -25,7 +25,7 @@ SECRET_KEY = '%mki2-$!=q&m^l&e+@86twcv=d)1t65i-7pjhg6d+3cnqw&8u*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['skysaga.vicp.io','123.122.83.41']
+ALLOWED_HOSTS = ['skysaga.vicp.io','127.0.0.1']
 
 
 # Application definition

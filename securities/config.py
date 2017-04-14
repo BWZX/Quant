@@ -14,7 +14,8 @@ footerjs=[]
 
 css=[
     '/static/bootstrap/dist/css/bootstrap.min.css',   
-    '/static/bootstrap/dist/css/bootstrap-theme.min.css'
+    '/static/bootstrap/dist/css/bootstrap-theme.min.css',
+    '/static/css/main.css'
 ]
 
 assets={
