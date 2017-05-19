@@ -21,6 +21,7 @@ from securities import services as svr
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'mainpage/', views.mainPage),
+    url(r'layout/', views.layout),
     url(r'postdata/', svr.postData),
     
 ]

@@ -17,3 +17,10 @@ def mainPage(request):
 
     return render(request,'securities/main.html',data)
 
+def layout(request):
+    data={}
+    data['title']='layout'
+    data['main']=static.assets
+    return render(request,'layout.html',data)
+
+
