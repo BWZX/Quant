@@ -38,7 +38,7 @@
         <div class="col-xs-4 bg-primary" style="height: 80px; margin-bottom: 5px;">
         </div>
 
-         <div class="col-xs-1 bg-primary" style="margin-bottom: 5px;">
+         <div class="col-xs-1 bg-primary" style="margin-bottom: 5px; height: 550px;">
             <div style="margin-bottom: 5px;">
             <a class="layoutSidebarfont">数据集</a></div>
             <div style="margin-bottom: 5px;"><a class="layoutSidebarfont">价值预测</a></div>
@@ -46,16 +46,9 @@
             <div style="margin-bottom: 5px;"><a class="layoutSidebarfont">回测验证</a></div>
         </div>
 
-        <div class="col-xs-11 bg-success" style="margin-bottom: 5px;">
-            <div style="height: 600px;"">
-            dhjd
-            </div>
-        </div>
-
-
-
-
-        {% block content %}{% endblock %}
+        <div class="col-xs-11 bg-success" style="margin-bottom: 5px; height: 550px;">
+            {% block content %}{% endblock %}            
+        </div>        
     </div>
     </div>
     {% for item in main.footerjs %}

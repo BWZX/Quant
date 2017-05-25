@@ -21,6 +21,6 @@ def layout(request):
     data={}
     data['title']='layout'
     data['main']=static.assets
-    return render(request,'layout.html',data)
+    return render(request,'subviews/data_new.html',data)
 
 
