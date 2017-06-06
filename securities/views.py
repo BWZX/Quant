@@ -17,10 +17,15 @@ def mainPage(request):
 
     return render(request,'securities/main.html',data)
 
-def layout(request):
-    data={}
-    data['title']='layout'
+def renderFun(request):
+    data={}    
+    # print('999999999999999   ',request.path)
+    name=request.path.replace('/','')
+    data['title']=name.replace('_',' ')
+    name='subviews/'+name+'.html'
+    # print(name)
     data['main']=static.assets
-    return render(request,'subviews/data_self_list.html',data)
+    return render(request,name,data)
+
 
 

@@ -64,8 +64,13 @@
 {% endblock %}
 
 {% block content %}
-    <h3><span> <a >back</a>&nbsp;|&nbsp;新建定制数据集 </span></h3>
+    <h3><span> <a href="/data_standard_list">back</a>&nbsp;|&nbsp;新建定制数据集 </span></h3>
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="/data_detail">基本信息</a></li>
+      <li role="presentation"><a href="/data_code_view">代码执行</a></li>      
+    </ul>
     <br> 
+
 <form class="form-horizontal">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">名称</label>
